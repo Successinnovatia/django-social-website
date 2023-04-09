@@ -24,6 +24,7 @@ urlpatterns = [
     #single url for authentication provided by django 
     path ('', include('django.contrib.auth.urls')),
     path('', views.dashboard, name='dashboard'),
+    path('register/', views.register, name = 'register'),
     
 ]
 
