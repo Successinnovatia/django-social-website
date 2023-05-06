@@ -31,4 +31,24 @@
 
 </div>
 
+
+
+<div class="social">
+    <ul>
+        <li class="facebook">
+            <a href ="{% url 'social:begin' 'facebook' %}">
+                Sign in with Facebook
+        </li>
+        <li class="twitter">
+            <a href ="{% url 'social:begin' 'twitter' %}">
+                Sign in with Twitter
+        </li>
+        <li class="google">
+            <a href ="{% url 'social:begin' 'google-oauth2' %}">
+                Sign in with Google
+        </li>
+    </ul>
+
+</div>
+
 {% endblock %}
