@@ -7,6 +7,7 @@
     <link href = "{% static 'css/base.css' %}" rel="stylesheet">
 </head>
 <body>
+    
     <div id="header">
         <span class="logo">Bookmarks</span>
         {% if request.user.is_authenticated %}
@@ -51,5 +52,24 @@
         {% block content %}
         {% endblock %}
     </div>
+    
+    
+
+    <script src="//cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js">
+        //script to implement the javascript cookie API
+    </script>
+    
+
+    <script>
+        // script to load javascript dom in all templates
+
+        const csrftoken = Cookies.get('csrftoken');
+        document.addEventListener('DOMContentLoaded', (event) => {
+            //Dom loaded
+            {% block domready %}
+
+            {% endblock %}
+        })
+    </script>
 </body>
 </html>
